@@ -261,8 +261,8 @@ function wsSetup() {
     socket = new WebSocket(url);
     socket.onopen = function() {
         //XXX: TODO What are you going to do here?
-        // debug("WebSocket open:", url);
-        update();
+        debug("WebSocket open:", url);
+        // update();
         
         
     };
