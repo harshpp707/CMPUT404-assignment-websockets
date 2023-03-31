@@ -56,7 +56,7 @@ function drawCircle(context,entity) {
         //moveTo(x,y);
         fillStyle = entity["colour"];
         strokeStyle = fillStyle;
-        arc(x, y, (entity["radius"])?entity["radius"]:10, 0, 2.0 * Math.PI, false);  
+        arc(x, y, (entity["radius"])?entity["radius"]:3, 0, 2.0 * Math.PI, false);  
         stroke();                                
     }
 }
@@ -66,7 +66,7 @@ function prepEntity(entity) {
         entity["colour"] = "#FF0000";
     }
     if (!entity["radius"]) {
-        entity["radius"] = 50;
+        entity["radius"] = 22;
     }
     return entity;
 }
@@ -237,16 +237,16 @@ mouse = (function() {
 // Add the application specific mouse listeners!
 //XXX: TODO Make these prettier!
 mouse.mousedowners.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'#46637F'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#F8B195'});
 });
 
 mouse.mouseuppers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'#46cfb0'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#F67280'});
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'#6C5B7B',
-                          'radius':10});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#c06c84',
+                          'radius':2});
 });
 
 
